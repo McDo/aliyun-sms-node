@@ -7,11 +7,11 @@ const sms = new SMS({
 
 sms.send({
   Format: 'JSON',
-  Action: 'SingleSendSms',
-  ParamString: '{"code":"1234"}',
-  RecNum: '13516534108',
+  TemplateParam: '{"code":"1234"}',
+  PhoneNumbers: '13516534108',
   SignName: '看看传播',
-  TemplateCode: 'SMS_42353328'
+  TemplateCode: 'SMS_42353328',
+  RegionId: "cn-beijing"
 }).then((result) => {
   console.log(result)
 }).catch(err => {
